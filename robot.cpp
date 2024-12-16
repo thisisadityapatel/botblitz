@@ -70,7 +70,7 @@ double cameraFrontBottomRight[] = {10.0, -10.0, 10.0};
 double cameraBackButtonRight[] = {10.0, -10.0, -10.0};
 double cameraFrontBottomLeft[] = {-10.0, -10.0, 10.0};
 double cameraBackButtonLeft[] = {-10.0, -10.0, -10.0};
-double cameraPosition[] = {cameraFront[0], cameraFront[1], cameraFront[2]};
+double cameraPosition[] = {cameraFrontBottomRight[0], cameraFrontBottomRight[1], cameraFrontBottomRight[2]};
 
 void updateCameraPosition(const double newPosition[3])
 {
@@ -170,21 +170,18 @@ void display(void)
   glTranslatef(0.0, 0.0, 0.0);
   glScalef(1, 1, 1);
   glColor3f(0.75, 0.75, 0.75);
-  glRotatef(30.0f, 1.0, 0.0, 0.0); 
   drawRobotChestMiddleFrustum(); // Middle Chest. 
 
   glPushMatrix();
   glTranslatef(0.0, 2.0, 0.0);
   glScalef(1, 1, 1);
   glColor3f(1.0, 0.0, 0.0);
-  glRotatef(30.0f, 1.0, 0.0, 0.0); 
   drawRobotChestUpperFrustum(); // Shoulders and Upper Chest.
   glPopMatrix();
 
   glPushMatrix();
   glTranslatef(0.0, -1.0, 0.0);
   glScalef(1, 1, 1);
-  glRotatef(30.0f, 1.0, 0.0, 0.0); 
   drawRobotChestLowerFrustum(); // Lower Chest.
   glPopMatrix();
 
@@ -218,7 +215,6 @@ void display(void)
 
   // Robot face
   glPushMatrix();
-  glRotatef(30.0f, 1.0, 0.0, 0.0); 
   glTranslatef(0.0, 3.55, 0.0);
   glScalef(1, 1, 1);
   drawRobotFace();
@@ -226,7 +222,6 @@ void display(void)
 
   // Robot Cannon
   glPushMatrix();
-  glRotatef(30.0f, 1.0, 0.0, 0.0); 
   if (!quadric)
   {
     quadric = gluNewQuadric();
@@ -251,7 +246,6 @@ void display(void)
 
   // Robot Cannon Supporter
   glPushMatrix();
-  glRotatef(30.0f, 1.0, 0.0, 0.0); 
   glTranslatef(1.0, 3, 0.0);
   glScalef(1, 1, 1);
   drawRobotCannonSupport();
