@@ -2,6 +2,8 @@
 
 3D minigame where players are tasked with shooting waves of robots (Optimus Prime), players must hit all robots before they reach the finish line (behind the cannon). If a robot reaches the end it dies, once all robots are dead the level resets.
 
+<video width="600" controls><source src="./video.mp4" type="video/mp4"></video>
+
 ### Compiling Information
 
 GLEW installation

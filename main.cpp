@@ -448,7 +448,7 @@ void getCameraForwardVector(float &fx, float &fy, float &fz)
 
 void drawGround()
 {
-    GLuint textureID = loadTexture("textures/surface.png");
+    GLuint textureID = loadTexture("texture/surface.png");
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
     glPushMatrix();
     glBindTexture(GL_TEXTURE_2D, textureID);
