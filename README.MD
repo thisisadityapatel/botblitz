@@ -1,6 +1,6 @@
 ### Description
 
-3D minigame where players are tasked with shooting waves of robots (Optimus Prime), players must hit all robots before they reach the finish line (behind the cannon). If a robot reaches the end it dies, once all robots are dead the level resets.
+Botblitz is a 3D minigame where players are tasked with shooting waves of robots (Optimus Prime), players must hit all robots before they reach the finish line (behind the cannon). If a robot reaches the end it dies, once all robots are dead the level resets.
 
 ### Compiling Information
 
