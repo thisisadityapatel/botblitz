@@ -39,6 +39,17 @@ g++ -o main main.cpp \
 -lglut -lGLEW -lglfw -framework OpenGL -w
 ```
 
+```shell
+g++ -o robot robot.cpp \
+-I/opt/homebrew/Cellar/glew/2.2.0_1/include \
+-I/opt/homebrew/Cellar/freeglut/3.6.0/include \
+-I/opt/homebrew/Cellar/glfw/3.4/include \
+-L/opt/homebrew/Cellar/glew/2.2.0_1/lib \
+-L/opt/homebrew/Cellar/freeglut/3.6.0/lib \
+-L/opt/homebrew/Cellar/glfw/3.4/lib \
+-lglut -lGLEW -lglfw -framework OpenGL -w
+```
+
 # Potential errors and fixes
 
 Include the following headers for macbooks.
