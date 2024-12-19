@@ -52,6 +52,11 @@ struct RobotComponent
     float afterDeadBodyAngle = 0;                                    // Max 30
 };
 
+struct Robot_X_Z_Position{
+    GLdouble x = 0.0;
+    GLdouble z = 0.0;
+};
+
 void display(void);
 void initMouse();
 void drawGround(void);
@@ -121,10 +126,28 @@ GLfloat robotMovementSpeed = 0.04;
 // ------------------------
 
 std::vector<RobotComponent> robotArmy;
+std::vector<Robot_X_Z_Position> initial_robot_army_positions;
 
 void initializeRobotArmy()
 {
     robotArmy.clear();
+    initial_robot_army_positions.clear();
+
+    if(difficultyMultiplier == 1){
+        for(size_t i = 0; i < 5; i++){
+
+        }
+    }
+    if(difficultyMultiplier == 2){
+        for(size_t i = 0; i < 7; i++){
+
+        }
+    }
+    if(difficultyMultiplier == 3){
+        for(size_t i = 0; i < 10; i++){
+
+        }
+    }
 
     RobotComponent robot1;
     robot1.robotStartingPosition.x = 50.0f;
@@ -304,17 +327,17 @@ void keyboardHandler(unsigned char key, int x, int y) {
     case '5':
         robotArmy[4].stillalive = false;
         break;
-    case '7': // Easy difficulty
+    case '7': // Easy difficulty (5 robots)
         difficultyMultiplier = 1.0f;
         initializeRobotArmy(); // Reset robot positions
         std::cout << "Difficulty set to Easy" << std::endl;
         break;
-    case '8': // Medium difficulty
+    case '8': // Medium difficulty (7 robots)
         difficultyMultiplier = 2.0f;
         initializeRobotArmy(); // Reset robot positions
         std::cout << "Difficulty set to Medium" << std::endl;
         break;
-    case '9': // Hard difficulty
+    case '9': // Hard difficulty (10 robots)
         difficultyMultiplier = 3.0f;
         initializeRobotArmy(); // Reset robot positions
         std::cout << "Difficulty set to Hard" << std::endl;
@@ -502,7 +525,6 @@ void mouseButtonHandler(int button, int state, int x, int y) {
         fireCannonBall(); // Fire the ball when the left mouse button is pressed
     }
 }
-
 
 void drawBalls() {
     for (const auto &ball : activeBalls) {
