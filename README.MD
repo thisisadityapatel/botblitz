@@ -1,6 +1,6 @@
 ### Description
 
-Botblitz is a 3D minigame designed in OpenGL where players are tasked with shooting waves of robots (Optimus Prime), players must hit all robots before they reach the finish line (behind the cannon). If a robot reaches the end it dies, once all robots are dead the level resets.
+Botblitz is a 3D minigame designed in OpenGL where players are tasked with shooting waves of robots (Optimus Prime), players must hit all robots before they reach the finish line (behind the cannon). If a robot reaches the end it dies, once all robots are dead the level resets. You can checkout the video clips in the demo folder to get an insight into the running game.
 
 There are three levels for the game, with each level the robots become faster making it difficult to hunt them down using the defensive cannon.
 
