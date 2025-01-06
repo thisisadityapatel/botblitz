@@ -109,4 +109,6 @@ Then run the program running the following command:
 ./robot
 ```
 
+https://github.com/user-attachments/assets/6d1b335e-ca60-440b-9557-83b02721017d
+
 To view the robot model from different camera projection angles, press the key `V` or `v` and then click on any number key between `1` and `9`. This provided freedom to visualize the robot better during the hirarchial architecture development of the model.
