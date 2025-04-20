@@ -1,12 +1,12 @@
 ### Description
 
-Botblitz is a 3D minigame designed in OpenGL where players are tasked with shooting waves of robots (Optimus Prime), players must hit all robots before they reach the finish line (behind the cannon). If a robot reaches the end it dies, once all robots are dead the level resets.
+3D minigame designed in C+ OpenGL where players are tasked with shooting waves of robots (Optimus Prime), players must hit all robots before they reach the finish line (behind the cannon). If a robot reaches the end it dies, once all robots are dead the level resets.
 
 https://github.com/user-attachments/assets/6d1b335e-ca60-440b-9557-83b02721017d
 
 https://github.com/user-attachments/assets/37946ad6-0d0c-4a24-9611-c754dddf8018
 
-There are three levels for the game, with each level the robots become faster making it difficult to hunt them down using the defensive cannon.
+There are three levels to the game, at with each level robots move faster making it difficult to hunt using the defensive cannon.
 
 Click `7` for `Level 1` - Easy (Default)  
 Click `8` for `Level 2` - Medium  
@@ -14,29 +14,13 @@ Click `9` for `Level 3` - Hard
 
 ### Compiling Information
 
-GLEW installation
+Dependency installation:
 
 ```bash
-brew install cmake
+brew install glew@2.2.0_1 freeglut@3.6.0 glfw@3.4
 ```
 
-```bash
-brew install glew
-```
-
-freeglut installation
-
-```bash
-brew install freeglut
-```
-
-glfw installation
-
-```bash
-brew install glfw
-```
-
-After following the above run:
+Compile:
 
 ```bash
 g++ -o main main.cpp \
@@ -51,7 +35,7 @@ g++ -o main main.cpp \
 
 # Potential errors and fixes
 
-Include the following headers for macbooks.
+Include the following headers if using macOS.
 
 ```cpp
 #include <GL/glew.h>
@@ -59,7 +43,7 @@ Include the following headers for macbooks.
 #include <GLFW/glfw3.h>
 ```
 
-To fix in VS Code hit cmd + shift + p and look for C/C++: Edit configurations (JSON) and set up your JSON file like this:
+To fix in VS Code, hit `CMD + shift + p` and look for `C/C++`: Edit configurations (JSON) and set up the JSON file:
 
 ```json
 {
@@ -87,13 +71,13 @@ To fix in VS Code hit cmd + shift + p and look for C/C++: Edit configurations (J
 }
 ```
 
-Finally run the program running the following command:
+Finally, start the game:
 
 ```bash
 ./main
 ```
 
-To see just the robot model and its movement, compile the file robot.cpp using the following instruction.
+To see just the robot model and its movement, compile `robot.cpp` saperately using the following instruction.
 
 
 ```bash
@@ -107,7 +91,7 @@ g++ -o robot robot.cpp \
 -lglut -lGLEW -lglfw -framework OpenGL -w
 ```
 
-Then run the program running the following command:
+Run the robot visulization program:
 
 ```bash
 ./robot
